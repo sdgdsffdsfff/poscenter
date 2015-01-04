@@ -1,0 +1,6 @@
+id:id:int
+orderNumber:order_number:String
+charger:charger:String
+createTime:create_time:Timestamp
+useStatus:use_status:int
+department:department:String

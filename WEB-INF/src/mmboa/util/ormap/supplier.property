@@ -1,0 +1,4 @@
+id:id:int
+name:name:String
+phone:phone:String
+isDelete:is_delete:int

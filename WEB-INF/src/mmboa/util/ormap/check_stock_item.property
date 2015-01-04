@@ -1,0 +1,10 @@
+id:id:int
+checkStockId:check_stock_id:int
+productId:product_id:int
+charger:charger:String
+purchasePrice:purchase_price:double
+salePrice:sale_price:double
+count:count:int
+stock:stock:int
+checkTime:check_time:Timestamp
+remark:remark:String

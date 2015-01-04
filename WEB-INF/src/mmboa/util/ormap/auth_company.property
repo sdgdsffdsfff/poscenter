@@ -1,0 +1,4 @@
+id:id:int
+name:name:String
+telephone:telephone:String
+createTime:create_time:Timestamp

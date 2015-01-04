@@ -1,0 +1,5 @@
+id:id:int
+charger:charger:String
+checkTime:check_time:Timestamp
+remark:remark:String
+useStatus:use_status:int

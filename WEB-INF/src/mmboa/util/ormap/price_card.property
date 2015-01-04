@@ -1,0 +1,9 @@
+id:id:String
+shopId:shop_id:int
+clerkName:clerk_name:String
+openTime:open_time:Timestamp
+state:state:int
+supplierId:supplier_id:int
+type:type:int
+password:password:String
+point:point:double

@@ -1,0 +1,6 @@
+id:id:int
+purchaseOrderId:purchase_order_id:int
+productId:product_id:int
+supplierId:supplier_id:int
+count:count:int
+purchasePrice:purchase_price:double

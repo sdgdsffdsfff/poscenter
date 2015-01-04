@@ -1,0 +1,6 @@
+id:id:int
+priceCardId:price_card_id:String
+point:point:double
+auditStatus:audit_status:int
+useStatus:use_status:int
+createTime:create_time:Timestamp

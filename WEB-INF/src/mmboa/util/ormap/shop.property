@@ -1,0 +1,7 @@
+id:id:int
+code:code:String
+name:name:String
+address:address:String
+ipAddress:ip_address:String
+charger:charger:String
+createTime:create_time:Timestamp

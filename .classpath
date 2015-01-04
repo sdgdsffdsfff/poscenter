@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/servlet-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jasper.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jsp-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/asm-3.3.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/asm-commons-3.3.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/asm-tree-3.3.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/freemarker-2.3.19.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/ognl-3.0.5.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/slf4j-api-1.6.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/slf4j-log4j12-1.6.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/struts2-convention-plugin-2.3.4.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/struts2-core-2.3.4.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/xwork-core-2.3.4.jar"/>
+	<classpathentry kind="src" path="WEB-INF/src"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jbarcode-0.2.8.jar" sourcepath="E:/jbarcode/jbarcode-0.2.8-src.zip"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jxl.jar" sourcepath="E:/jxl/jexcelapi/src"/>
+	<classpathentry kind="output" path="WEB-INF/classes"/>
+</classpath>

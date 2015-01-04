@@ -1,0 +1,7 @@
+id:id:String
+name:name:String
+mobile:mobile:String
+idCard:id_card:String
+registerTime:register_time:Timestamp
+useState:use_state:int
+changeTime:change_time:Timestamp

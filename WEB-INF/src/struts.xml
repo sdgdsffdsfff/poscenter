@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+  <constant name="struts.devMode" value="true" />
+  <constant name="struts.action.extension" value="do" />
+  <constant name="struts.convention.result.path" value="/"/>
+  <constant name="struts.convention.package.locators" value="mmboa"/>
+  <constant name="struts.convention.default.parent.package" value="struts-default"/> 
+  <constant name="struts.multipart.maxSize" value="20000000" />
+
+  <package name="struts-default2" abstract="true" extends="struts-default">
+        <result-types>
+            <result-type name="chain" class="com.opensymphony.xwork2.ActionChainResult"/>
+            <result-type name="dispatcher" class="org.apache.struts2.dispatcher.ServletDispatcherResult" default="true"/>
+            <result-type name="freemarker" class="org.apache.struts2.views.freemarker.FreemarkerResult"/>
+            <result-type name="httpheader" class="org.apache.struts2.dispatcher.HttpHeaderResult"/>
+            <result-type name="redirect" class="org.apache.struts2.dispatcher.ServletRedirectResult"/>
+            <result-type name="redirectAction" class="org.apache.struts2.dispatcher.ServletActionRedirectResult"/>
+            <result-type name="stream" class="org.apache.struts2.dispatcher.StreamResult"/>
+            <result-type name="velocity" class="org.apache.struts2.dispatcher.VelocityResult"/>
+            <result-type name="xslt" class="org.apache.struts2.views.xslt.XSLTResult"/>
+            <result-type name="plainText" class="org.apache.struts2.dispatcher.PlainTextResult" />
+        </result-types>
+        <interceptors>
+        	<interceptor name="fileUpload" class="org.apache.struts2.interceptor.FileUploadInterceptor"/>
+        </interceptors>
+        <default-class-ref class="com.opensymphony.xwork2.ActionSupport" />
+  </package>
+
+	<package name="ss" namespace="/pos" extends="struts-default2">
+		<global-results>
+			<result name="error">/error.jsp</result>
+		</global-results>
+		
+		<action name="Product" class="mmb.poscenter.action.ProductAction">
+			<result name="success">/poscenter/product/ProductList.jsp</result>
+			<result name="input">/poscenter/product/productForm.jsp</result>
+			<result name="detail">/poscenter/product/productDetail.jsp</result>
+			<result name="showBarcode">/poscenter/product/showBarcode.jsp</result>
+			<result name="selectProductList">/poscenter/product/selectProductList.jsp</result>
+		</action>
+		
+		<action name="goodsClass" class="mmb.poscenter.action.GoodsClassAction">
+			<result name="success">/poscenter/goodsclass/goodsClassList.jsp</result>
+			<result name="input">/poscenter/goodsclass/goodsClassForm.jsp</result>
+			<result name="detail">/poscenter/goodsclass/goodsClassDetail.jsp</result>
+		</action>
+		
+	    <action name="supplier" class="mmb.poscenter.action.SupplierAction">
+			<result name="success">/poscenter/supplier/supplierList.jsp</result>
+			<result name="input">/poscenter/supplier/supplierForm.jsp</result>
+			<result name="detail">/poscenter/supplier/supplierDetail.jsp</result>
+			<result name="choose">/poscenter/supplier/supplierChooseList.jsp</result>
+		</action>
+		
+		<action name="purchaseOrder" class="mmb.poscenter.action.PurchaseOrderAction">
+			<result name="success">/poscenter/purchaseorder/purchaseOrderList.jsp</result>
+			<result name="input">/poscenter/purchaseorder/purchaseOrderForm.jsp</result>
+		</action>
+		<action name="purchaseOrderItem" class="mmb.poscenter.action.PurchaseOrderItemAction">
+			<result name="success">/poscenter/purchaseorder/purchaseOrderItemList.jsp</result>
+			<result name="input">/poscenter/purchaseorder/purchaseOrderItemForm.jsp</result>
+		</action>
+		
+		<action name="sendOrder" class="mmb.poscenter.action.SendOrderAction">
+			<result name="success">/poscenter/sendorder/sendOrderList.jsp</result>
+			<result name="input">/poscenter/sendorder/sendOrderForm.jsp</result>
+		</action>
+		<action name="sendOrderItem" class="mmb.poscenter.action.SendOrderItemAction">
+			<result name="success">/poscenter/sendorder/sendOrderItemList.jsp</result>
+			<result name="input">/poscenter/sendorder/sendOrderItemForm.jsp</result>
+		</action>
+		
+		<action name="receiveOrder" class="mmb.poscenter.action.ReceiveOrderAction">
+			<result name="success">/poscenter/receiveorder/receiveorderList.jsp</result>
+			<result name="acquire">/poscenter/receiveorder/receiveorderform.jsp</result>
+		</action>
+		
+		<action name="receiveOrderItem" class="mmb.poscenter.action.ReceiveOrderItemAction">
+			<result name="success">/poscenter/receiveorder/receiveorderItemList.jsp</result>
+		</action>
+		
+		<action name="invoice" class="mmb.poscenter.action.InvoiceAction">
+			<result name="productList">/poscenter/invoice/productList.jsp</result>
+			<result name="success">/poscenter/invoice/invoiceList.jsp</result>
+		</action>
+		
+		<action name="shop" class="mmb.poscenter.action.ShopAction">
+			<result name="success">/poscenter/shop/shopList.jsp</result>
+			<result name="input">/poscenter/shop/shopForm.jsp</result>
+			<result name="detail">/poscenter/shop/shopDetail.jsp</result>
+			<result name="selectShopList">/poscenter/shop/selectShopList.jsp</result>
+		</action>
+		
+		<action name="shopVersion" class="mmb.poscenter.action.ShopVersionAction">
+			<result name="success">/poscenter/shopversion/shopVersionList.jsp</result>
+			<result name="input">/poscenter/shopversion/shopVersionForm.jsp</result>
+		</action>
+		
+		<action name="member" class="mmb.poscenter.action.MemberAction">
+			<result name="success">/poscenter/member/memberList.jsp</result>
+			<result name="detail">/poscenter/member/memberDetail.jsp</result>
+		</action>
+		
+		<action name="checkStock" class="mmb.poscenter.action.CheckStockAction">
+			<result name="success">/poscenter/checkstock/checkStockList.jsp</result>
+		</action>
+		<action name="checkStockItem" class="mmb.poscenter.action.CheckStockItemAction">
+			<result name="success">/poscenter/checkstock/checkStockItemList.jsp</result>
+			<result name="printCheckStockView">/poscenter/checkstock/printCheckStock.jsp</result>
+		</action>
+		
+		<action name="shopStock" class="mmb.poscenter.action.ShopStockAction">
+			<result name="productList">/poscenter/shopstock/productList.jsp</result>
+			<result name="success">/poscenter/shopstock/shopStockList.jsp</result>
+		</action>
+		
+		<action name="shopReturnOrder" class="mmb.poscenter.action.ShopReturnOrderAction">
+			<result name="success">/poscenter/shopreturnorder/shopReturnOrderList.jsp</result>
+		</action>
+		<action name="shopReturnOrderItem" class="mmb.poscenter.action.ShopReturnOrderItemAction">
+			<result name="success">/poscenter/shopreturnorder/shopReturnOrderItemList.jsp</result>
+		</action>
+		<action name="shopOrder" class="mmb.poscenter.action.ShopOrderAction">
+			<result name="shopLeaseOrderList">/poscenter/shoporder/leaseOrderList.jsp</result>
+			<result name="shopSaledOrderList">/poscenter/shoporder/saledOrderList.jsp</result>
+		</action>
+		
+		<action name="shopSaledOrderEvent" class="mmb.poscenter.action.ShopSaledOrderEventAction">
+			<result name="success">/poscenter/shoporder/showSaledOrderEvent.jsp</result>
+		</action>
+		
+		<action name="shopInvoice" class="mmb.poscenter.action.ShopInvoiceAction">
+			<result name="productList">/poscenter/shopinvoice/productList.jsp</result>
+			<result name="success">/poscenter/shopinvoice/shopInvoiceList.jsp</result>
+		</action>
+		
+		<action name="event" class="mmb.poscenter.action.EventAction">
+			<result name="success">/poscenter/event/eventList.jsp</result>
+		</action>
+		<action name="buyGiftEvent" class="mmb.poscenter.action.BuyGiftEventAction">
+			<result name="success">/poscenter/event/eventList.jsp</result>
+			<result name="add">/poscenter/event/addBuyGiftEvent.jsp</result>
+			<result name="update">/poscenter/event/updateBuyGiftEvent.jsp</result>
+			<result name="detail">/poscenter/event/showBuyGiftEvent.jsp</result>
+		</action>
+		<action name="swapBuyEvent" class="mmb.poscenter.action.SwapBuyEventAction">
+			<result name="input">/poscenter/event/swapBuyEventForm.jsp</result>
+			<result name="update">/poscenter/event/updateSwapBuyEventForm.jsp</result>
+			<result name="cat">/poscenter/event/catSwapBuyEventForm.jsp</result>
+		</action>
+		<action name="comboEvent" class="mmb.poscenter.action.ComboEventAction">
+			<result name="add">/poscenter/event/addComboEvent.jsp</result>
+			<result name="update">/poscenter/event/updateComboEvent.jsp</result>
+			<result name="detail">/poscenter/event/showComboEvent.jsp</result>
+		</action>
+		<action name="countDiscountEvent" class="mmb.poscenter.action.CountDiscountEventAction">
+			<result name="add">/poscenter/event/addCountDiscountEvent.jsp</result>
+			<result name="update">/poscenter/event/updateCountDiscountEvent.jsp</result>
+			<result name="detail">/poscenter/event/showCountDiscountEvent.jsp</result>
+		</action>
+		<action name="moneyDiscountEvent" class="mmb.poscenter.action.MoneyDiscountEventAction">
+			<result name="add">/poscenter/event/addMoneyDiscountEvent.jsp</result>
+			<result name="update">/poscenter/event/updateMoneyDiscountEvent.jsp</result>
+			<result name="detail">/poscenter/event/showMoneyDiscountEvent.jsp</result>
+		</action>
+		<action name="priceCard" class="mmb.poscenter.action.PriceCardAction">
+			<result name="success">/poscenter/pricecard/priceCardList.jsp</result>
+			<result name="input">/poscenter/pricecard/priceCardForm.jsp</result>
+			<result name="selectPriceCardList">/poscenter/pricecard/selectPriceCardList.jsp</result>
+			<result name="open">/poscenter/pricecard/openCardForm.jsp</result>
+			<result name="update">/poscenter/pricecard/updateCardForm.jsp</result>
+			<result name="detail">/poscenter/pricecard/priceCardDetail.jsp</result>
+		</action>
+		
+		<action name="company" class="mmb.auth.action.CompanyAction">
+			<result name="success">/poscenter/auth/company/companyList.jsp</result>
+			<result name="input">/poscenter/auth/company/companyForm.jsp</result>
+			<result name="selectCompanyList">/poscenter/auth/company/selectCompanyList.jsp</result>
+		</action>
+		<action name="department" class="mmb.auth.action.DepartmentAction">
+			<result name="success">/poscenter/auth/department/departmentList.jsp</result>
+			<result name="input">/poscenter/auth/department/departmentForm.jsp</result>
+			<result name="choose">/poscenter/auth/department/departmentChooseList.jsp</result>
+		</action>
+		<action name="resource" class="mmb.auth.action.ResourceAction">
+			<result name="success">/poscenter/auth/resource/resourceList.jsp</result>
+			<result name="input">/poscenter/auth/resource/resourceForm.jsp</result>
+			<result name="detail">/poscenter/auth/resource/resourceDetail.jsp</result>
+		</action>
+		<action name="menu" class="mmb.auth.action.MenuAction">
+			<result name="success">/poscenter/auth/menu/menuList.jsp</result>
+			<result name="input">/poscenter/auth/menu/menuForm.jsp</result>
+			<result name="detail">/poscenter/auth/menu/menuDetail.jsp</result>
+			<result name="secondLevelMenuList">/poscenter/desktop/left.jsp</result>
+		</action>
+		<action name="user" class="mmb.auth.action.UserAction">
+			<result name="success">/poscenter/auth/user/userList.jsp</result>
+			<result name="input">/poscenter/auth/user/userForm.jsp</result>
+			<result name="detail">/poscenter/auth/user/userDetail.jsp</result>
+		</action>
+		<action name="role" class="mmb.auth.action.RoleAction">
+			<result name="success">/poscenter/auth/role/roleList.jsp</result>
+			<result name="input">/poscenter/auth/role/roleForm.jsp</result>
+			<result name="detail">/poscenter/auth/role/roleDetail.jsp</result>
+			<result name="allotRole">/poscenter/auth/role/allotRole.jsp</result>
+			<result name="roleResource">/poscenter/auth/role/roleResource.jsp</result>
+		</action>
+		
+		<action name="rechargeOrder" class="mmb.poscenter.action.RechargeOrderAction">
+			<result name="success">/poscenter/rechargeorder/rechargeOrderList.jsp</result>
+			<result name="auditList">/poscenter/rechargeorder/auditRechargeOrderList.jsp</result>
+			<result name="input">/poscenter/rechargeorder/rechargeOrderForm.jsp</result>
+		</action>
+		<action name="adjustPriceBill" class="mmb.poscenter.action.AdjustPriceBillAction">
+			<result name="success">/poscenter/adjustpricebill/adjustPriceBillList.jsp</result>
+		</action>
+		
+	</package>
+
+	<package name="pos-interface" namespace="/enter" extends="struts-default2">
+		<action name="posadmin" class="mmb.poscenter.action.PosadminAction">
+		</action>
+	</package>
+</struts>

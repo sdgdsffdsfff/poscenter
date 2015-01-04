@@ -1,0 +1,14 @@
+id:id:int
+username:username:String
+password:password:String
+createDatetime:create_datetime:Timestamp
+flag:flag:int
+name:name:String
+phone:phone:String
+address:address:String
+email:email:String
+gender:gender:int
+postcode:postcode:String
+nick:nick:String
+departments:departments:String
+staffId:staff_id:int

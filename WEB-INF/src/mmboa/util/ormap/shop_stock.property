@@ -1,0 +1,5 @@
+id:id:int
+shopId:shop_id:int
+productId:product_id:int
+stock:stock:int
+createTime:create_time:Timestamp

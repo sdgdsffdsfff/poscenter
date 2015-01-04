@@ -1,0 +1,8 @@
+id:id:String
+parentId:parent_id:String
+resName:res_name:String
+resUrl:res_url:String
+resDesc:res_desc:String
+treeLevel:tree_level:int
+isLeaf:is_leaf:int
+createTime:create_time:Timestamp

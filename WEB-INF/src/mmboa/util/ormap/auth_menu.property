@@ -1,0 +1,8 @@
+id:id:String
+parentId:parent_id:String
+resourceId:res_id:String
+menuName:menu_name:String
+menuDesc:menu_desc:String
+treeLevel:tree_level:int
+isLeaf:is_leaf:int
+createTime:create_time:Timestamp

@@ -1,0 +1,7 @@
+id:id:int
+versionNumber:version_number:String
+versionName:version_name:String
+versionDesc:version_desc:String
+filePath:file_path:String
+createTime:create_time:Timestamp
+useStatus:use_status:int

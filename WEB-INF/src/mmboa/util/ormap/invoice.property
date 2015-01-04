@@ -1,0 +1,10 @@
+id:id:int
+productId:product_id:int
+operType:oper_type:String
+beforeCount:before_count:int
+count:count:int
+afterCount:after_count:int
+operUser:oper_user:String
+createTime:create_time:Timestamp
+remark:remark:String
+serialNumber:serial_number:String

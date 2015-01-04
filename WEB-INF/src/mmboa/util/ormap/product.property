@@ -1,0 +1,16 @@
+id:id:int
+goodsClassId:goods_class_id:String
+supplierId:supplier_id:int
+barCode:bar_code:String
+name:name:String
+leasePrice:lease_price:double
+monthLeasePrice:month_lease_price:double
+deposit:deposit:double
+salePrice:sale_price:double
+limitPrice:limit_price:double
+lockPrice:lock_price:double
+redLines:red_lines:double
+blueLines:blue_lines:double
+stock:stock:int
+purchaseReferPrice:purchase_refer_price:double
+isDelete:is_delete:int

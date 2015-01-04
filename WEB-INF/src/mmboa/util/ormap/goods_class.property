@@ -1,0 +1,7 @@
+id:id:String
+parentId:parent_id:String
+name:name:String
+desc:desc:String
+treeLevel:tree_level:int
+isLeaf:is_leaf:int
+createTime:create_time:Timestamp
